@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 
 const isAuth = (req, res, next) => {
-    if (req.session) {
+    if (req.session.username) {
         //TODO check in db
         return next();
     }
