@@ -1,6 +1,8 @@
 "use strict";
 
 const express = require('express');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
@@ -15,7 +17,21 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+
+if (app.get('env') === 'production') {
+    app.set('trust proxy', 1); // trust first proxy
+    session.cookie.secure = true; // serve secure cookies
+}
+
+
+app.use(session({
+    secret: 'aaaa-bbbb-ccccccc',
+    resave: false,
+    saveUninitialized: false,
+    //store: new MongoStore({ dbPromise: dbInstancePromise })
+}));
+
+
 
 app.use('/auth', auth);
 app.use(express.static(path.join(__dirname, 'dist')));
@@ -36,9 +52,7 @@ app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
   res.status(err.status || 500);
-  res.render('error');
 });
 
 module.exports = app;
