@@ -60,3 +60,4 @@ typings/
 .env
 
 
+/models/user.js
