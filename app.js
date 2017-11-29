@@ -9,6 +9,9 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
+const mongoose = require('mongoose');
+const assert = require('assert');
+
 const auth = require('./routes/auth');
 
 const app = express();
@@ -23,12 +26,13 @@ if (app.get('env') === 'production') {
     session.cookie.secure = true; // serve secure cookies
 }
 
-
+const url = 'mongodb://localhost:27017/MovieDB';
+const connection = mongoose.connect(url);
 app.use(session({
-    secret: 'aaaa-bbbb-ccccccc',
+    secret: 'abcdefg',
     resave: false,
     saveUninitialized: false,
-    //store: new MongoStore({ dbPromise: dbInstancePromise })
+    store: new MongoStore({ mongooseConnection: connection })
 }));
 
 

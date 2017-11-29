@@ -25,8 +25,10 @@ router.get('/login', isAuth, (req, res, next) => {
 
 router.post('/login', (req, res, next) => {
     let { username, password } = req.body;
+    //TODO check user exists in db
     req.session.username = username;
     console.log(username, password);
+
     res.send(200, true);
 });
 
@@ -39,6 +41,7 @@ router.post('/register', (req, res, next) => {
     let { username, password } = req.body;
     req.session.username = username;
     console.log(username, password);
+    //TODO check if user doesn't exist
     res.send(200, true);
 });
 
