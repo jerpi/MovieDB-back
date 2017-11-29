@@ -2,21 +2,47 @@
 
 const express = require('express');
 const router = express.Router();
+const User = require('../schemas/user');
 
 const isAuth = (req, res, next) => {
-    if (req.session.username) {
-        //TODO check in db
-        return next();
+    const { username } = req.session;
+    if (username) {
+        User.findOne({ username })
+            .then(
+                doc => {
+                    if (doc) {
+                        return next();
+                    }
+                    res.sendStatus(401);
+                },
+                err => {
+                    res.sendStatus(500);
+                }
+            );
+    } else {
+        res.sendStatus(401);
     }
-    res.sendStatus(401);
 };
 
 const isAdmin = (req, res, next) => {
-    if (req.session && req.session.admin) {
-        //TODO check in db
-        return next();
+    const { username } = req.session;
+    if (username) {
+        User.findOne({ username })
+            .then(
+                doc => {
+                    if (doc) {
+                        if (doc.admin) { return next(); }
+                        return res.sendStatus(403);
+                    }
+                    res.sendStatus(401);
+                },
+                err => {
+                    res.sendStatus(500);
+                }
+            );
+    } else {
+        res.sendStatus(401);
     }
-    res.sendStatus(401);
 };
 
 router.get('/login', isAuth, (req, res, next) => {
@@ -25,11 +51,19 @@ router.get('/login', isAuth, (req, res, next) => {
 
 router.post('/login', (req, res, next) => {
     let { username, password } = req.body;
-    //TODO check user exists in db
-    req.session.username = username;
-    console.log(username, password);
-
-    res.send(200, true);
+    User.findOne({ username, password })
+        .then(
+            doc => {
+                if (doc) {
+                    req.session.username = username;
+                    return res.send(200, true);
+                }
+                res.sendStatus(401);
+            },
+            err => {
+                res.sendStatus(400);
+            }
+        );
 });
 
 router.get('/logout', (req, res, next) => {
@@ -39,10 +73,16 @@ router.get('/logout', (req, res, next) => {
 
 router.post('/register', (req, res, next) => {
     let { username, password } = req.body;
-    req.session.username = username;
-    console.log(username, password);
-    //TODO check if user doesn't exist
-    res.send(200, true);
+    new User({ username, password }).save()
+        .then(
+            doc => {
+                req.session.username = username;
+                res.send(200, true);
+            },
+            err => {
+                res.sendStatus(400);
+            }
+        );
 });
 
 router.get('/admin', isAdmin, (req, res, next) => {

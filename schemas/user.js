@@ -49,4 +49,4 @@ User.pre('save', function(next) {
 
 
 const model = mongoose.model('users', User);
-module.exports.User = model;
+module.exports = model;
