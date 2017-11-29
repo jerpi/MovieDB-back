@@ -6,43 +6,41 @@ const User = require('../schemas/user');
 
 const isAuth = (req, res, next) => {
     const { username } = req.session;
-    if (username) {
-        User.findOne({ username })
-            .then(
-                doc => {
-                    if (doc) {
-                        return next();
-                    }
-                    res.sendStatus(401);
-                },
-                err => {
-                    res.sendStatus(500);
-                }
-            );
-    } else {
-        res.sendStatus(401);
+    if (!username) {
+        return res.sendStatus(401);
     }
+    User.findOne({ username })
+        .then(
+            doc => {
+                if (doc) {
+                    return next();
+                }
+                res.sendStatus(401);
+            },
+            err => {
+                res.sendStatus(500);
+            }
+        );
 };
 
 const isAdmin = (req, res, next) => {
     const { username } = req.session;
-    if (username) {
-        User.findOne({ username })
-            .then(
-                doc => {
-                    if (doc) {
-                        if (doc.admin) { return next(); }
-                        return res.sendStatus(403);
-                    }
-                    res.sendStatus(401);
-                },
-                err => {
-                    res.sendStatus(500);
-                }
-            );
-    } else {
+    if (!username) {
         res.sendStatus(401);
     }
+    User.findOne({ username })
+        .then(
+            doc => {
+                if (doc) {
+                    if (doc.admin) { return next(); }
+                    return res.sendStatus(403);
+                }
+                res.sendStatus(401);
+            },
+            err => {
+                res.sendStatus(500);
+            }
+        );
 };
 
 router.get('/login', isAuth, (req, res, next) => {
