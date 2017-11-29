@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea2086db-b94a-4813-bf1d-fbcab677ec56" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/auth.js" afterPath="$PROJECT_DIR$/routes/auth.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/routes/auth.js" afterPath="$PROJECT_DIR$/routes/auth.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,10 +22,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-              <folding>
-                <marker date="1511974864374" expanded="true" signature="0:415" ph="{&quot;name&quot;: &quot;back&quot;...}" />
-                <marker date="1511974864374" expanded="true" signature="129:413" ph="{&quot;body-parser&quot;: &quot;~1.18.2&quot;...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -37,21 +34,6 @@
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <marker date="1511974823350" expanded="true" signature="28883:28891" ph="{&quot;version&quot;: &quot;1.0.3&quot;...}" />
-                <marker date="1511974823350" expanded="true" signature="28911:29138" ph="{&quot;version&quot;: &quot;0.4.4&quot;...}" />
-                <marker date="1511974823350" expanded="true" signature="29095:29132" ph="{&quot;amdefine&quot;: &quot;1.0.1&quot;...}" />
-                <marker date="1511974823350" expanded="true" signature="29156:29384" ph="{&quot;version&quot;: &quot;1.4.0&quot;...}" />
-                <marker date="1511974823350" expanded="true" signature="29408:29708" ph="{&quot;version&quot;: &quot;1.0.3&quot;...}" />
-                <marker date="1511974823350" expanded="true" signature="29662:29702" ph="{&quot;safe-buffer&quot;: &quot;5.1.1&quot;...}" />
-                <marker date="1511974823350" expanded="true" signature="29730:31121" ph="{&quot;version&quot;: &quot;2.1.0&quot;...}" />
-                <marker date="1511974823350" expanded="true" signature="29918:30008" ph="{&quot;css&quot;: &quot;1.0.8&quot;...}" />
-                <marker date="1511974823350" expanded="true" signature="30032:31115" ph="{...}" />
-                <marker date="1511974823350" expanded="true" signature="30056:30242" ph="{&quot;version&quot;: &quot;1.0.1&quot;...}" />
-                <marker date="1511974823350" expanded="true" signature="30263:30514" ph="{&quot;version&quot;: &quot;2.0.0&quot;...}" />
-                <marker date="1511974823350" expanded="true" signature="30457:30504" ph="{&quot;is-promise&quot;: &quot;1.0.1&quot;...}" />
-                <marker date="1511974823350" expanded="true" signature="30538:30795" ph="{&quot;version&quot;: &quot;0.1.43&quot;...}" />
-                <marker date="1511974823350" expanded="true" signature="30740:30785" ph="{&quot;amdefine&quot;: &quot;1.0.1&quot;...}" />
-                <marker date="1511974823350" expanded="true" signature="30818:31107" ph="{&quot;version&quot;: &quot;2.2.5&quot;...}" />
-                <marker date="1511974823350" expanded="true" signature="31016:31097" ph="{&quot;optimist&quot;: &quot;0.3.7&quot;...}" />
                 <marker date="1511974823350" expanded="true" signature="32877:32885" ph="{&quot;version&quot;: &quot;1.0.0&quot;...}" />
               </folding>
             </state>
@@ -91,7 +73,7 @@
       <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/schemas/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="867">
               <caret line="51" column="22" lean-forward="false" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
               <folding />
             </state>
@@ -101,8 +83,8 @@
       <file leaf-file-name="auth.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/auth.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+            <state relative-caret-position="1037">
+              <caret line="70" column="5" lean-forward="false" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -205,6 +187,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -237,7 +220,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -246,9 +228,8 @@
     <property name="javascript.nodejs.core.library.configured.version" value="8.2.0" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="add_unversioned_files" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../front" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
-    <property name="JavaScriptPreferStrict" value="true" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RunDashboard">
@@ -263,9 +244,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.bin\www" />
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -277,12 +260,13 @@
       <workItem from="1511884703735" duration="4553000" />
       <workItem from="1511895071645" duration="5916000" />
       <workItem from="1511958038587" duration="1204000" />
-      <workItem from="1511973316307" duration="4571000" />
+      <workItem from="1511973316307" duration="5094000" />
+      <workItem from="1511978859757" duration="558000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16244000" />
+    <option name="totallyTimeSpent" value="17325000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -299,13 +283,13 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3279743" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -313,6 +297,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -327,14 +312,67 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="77" column="1" lean-forward="false" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="59" lean-forward="false" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/schemas/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="22" lean-forward="false" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/movies.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/auth.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding>
-            <marker date="1511974864374" expanded="true" signature="0:415" ph="{&quot;name&quot;: &quot;back&quot;...}" />
-            <marker date="1511974864374" expanded="true" signature="129:413" ph="{&quot;body-parser&quot;: &quot;~1.18.2&quot;...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -344,21 +382,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1511974823350" expanded="true" signature="28883:28891" ph="{&quot;version&quot;: &quot;1.0.3&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="28911:29138" ph="{&quot;version&quot;: &quot;0.4.4&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29095:29132" ph="{&quot;amdefine&quot;: &quot;1.0.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29156:29384" ph="{&quot;version&quot;: &quot;1.4.0&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29408:29708" ph="{&quot;version&quot;: &quot;1.0.3&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29662:29702" ph="{&quot;safe-buffer&quot;: &quot;5.1.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29730:31121" ph="{&quot;version&quot;: &quot;2.1.0&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29918:30008" ph="{&quot;css&quot;: &quot;1.0.8&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30032:31115" ph="{...}" />
-            <marker date="1511974823350" expanded="true" signature="30056:30242" ph="{&quot;version&quot;: &quot;1.0.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30263:30514" ph="{&quot;version&quot;: &quot;2.0.0&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30457:30504" ph="{&quot;is-promise&quot;: &quot;1.0.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30538:30795" ph="{&quot;version&quot;: &quot;0.1.43&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30740:30785" ph="{&quot;amdefine&quot;: &quot;1.0.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30818:31107" ph="{&quot;version&quot;: &quot;2.2.5&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="31016:31097" ph="{&quot;optimist&quot;: &quot;0.3.7&quot;...}" />
             <marker date="1511974823350" expanded="true" signature="32877:32885" ph="{&quot;version&quot;: &quot;1.0.0&quot;...}" />
           </folding>
         </state>
@@ -416,10 +439,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding>
-            <marker date="1511974864374" expanded="true" signature="0:415" ph="{&quot;name&quot;: &quot;back&quot;...}" />
-            <marker date="1511974864374" expanded="true" signature="129:413" ph="{&quot;body-parser&quot;: &quot;~1.18.2&quot;...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -429,21 +449,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1511974823350" expanded="true" signature="28883:28891" ph="{&quot;version&quot;: &quot;1.0.3&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="28911:29138" ph="{&quot;version&quot;: &quot;0.4.4&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29095:29132" ph="{&quot;amdefine&quot;: &quot;1.0.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29156:29384" ph="{&quot;version&quot;: &quot;1.4.0&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29408:29708" ph="{&quot;version&quot;: &quot;1.0.3&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29662:29702" ph="{&quot;safe-buffer&quot;: &quot;5.1.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29730:31121" ph="{&quot;version&quot;: &quot;2.1.0&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29918:30008" ph="{&quot;css&quot;: &quot;1.0.8&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30032:31115" ph="{...}" />
-            <marker date="1511974823350" expanded="true" signature="30056:30242" ph="{&quot;version&quot;: &quot;1.0.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30263:30514" ph="{&quot;version&quot;: &quot;2.0.0&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30457:30504" ph="{&quot;is-promise&quot;: &quot;1.0.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30538:30795" ph="{&quot;version&quot;: &quot;0.1.43&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30740:30785" ph="{&quot;amdefine&quot;: &quot;1.0.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30818:31107" ph="{&quot;version&quot;: &quot;2.2.5&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="31016:31097" ph="{&quot;optimist&quot;: &quot;0.3.7&quot;...}" />
             <marker date="1511974823350" expanded="true" signature="32877:32885" ph="{&quot;version&quot;: &quot;1.0.0&quot;...}" />
           </folding>
         </state>
@@ -501,44 +506,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding>
-            <marker date="1511974864374" expanded="true" signature="0:415" ph="{&quot;name&quot;: &quot;back&quot;...}" />
-            <marker date="1511974864374" expanded="true" signature="129:413" ph="{&quot;body-parser&quot;: &quot;~1.18.2&quot;...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1511974823350" expanded="true" signature="28883:28891" ph="{&quot;version&quot;: &quot;1.0.3&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="28911:29138" ph="{&quot;version&quot;: &quot;0.4.4&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29095:29132" ph="{&quot;amdefine&quot;: &quot;1.0.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29156:29384" ph="{&quot;version&quot;: &quot;1.4.0&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29408:29708" ph="{&quot;version&quot;: &quot;1.0.3&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29662:29702" ph="{&quot;safe-buffer&quot;: &quot;5.1.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29730:31121" ph="{&quot;version&quot;: &quot;2.1.0&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29918:30008" ph="{&quot;css&quot;: &quot;1.0.8&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30032:31115" ph="{...}" />
-            <marker date="1511974823350" expanded="true" signature="30056:30242" ph="{&quot;version&quot;: &quot;1.0.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30263:30514" ph="{&quot;version&quot;: &quot;2.0.0&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30457:30504" ph="{&quot;is-promise&quot;: &quot;1.0.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30538:30795" ph="{&quot;version&quot;: &quot;0.1.43&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30740:30785" ph="{&quot;amdefine&quot;: &quot;1.0.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30818:31107" ph="{&quot;version&quot;: &quot;2.2.5&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="31016:31097" ph="{&quot;optimist&quot;: &quot;0.3.7&quot;...}" />
             <marker date="1511974823350" expanded="true" signature="32877:32885" ph="{&quot;version&quot;: &quot;1.0.0&quot;...}" />
           </folding>
         </state>
@@ -598,37 +576,13 @@
     <entry file="file://$PROJECT_DIR$/views/index.jade" />
     <entry file="file://$PROJECT_DIR$/routes/users.js" />
     <entry file="file://$PROJECT_DIR$/routes/index.js" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1511974823350" expanded="true" signature="28883:28891" ph="{&quot;version&quot;: &quot;1.0.3&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="28911:29138" ph="{&quot;version&quot;: &quot;0.4.4&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29095:29132" ph="{&quot;amdefine&quot;: &quot;1.0.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29156:29384" ph="{&quot;version&quot;: &quot;1.4.0&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29408:29708" ph="{&quot;version&quot;: &quot;1.0.3&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29662:29702" ph="{&quot;safe-buffer&quot;: &quot;5.1.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29730:31121" ph="{&quot;version&quot;: &quot;2.1.0&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="29918:30008" ph="{&quot;css&quot;: &quot;1.0.8&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30032:31115" ph="{...}" />
-            <marker date="1511974823350" expanded="true" signature="30056:30242" ph="{&quot;version&quot;: &quot;1.0.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30263:30514" ph="{&quot;version&quot;: &quot;2.0.0&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30457:30504" ph="{&quot;is-promise&quot;: &quot;1.0.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30538:30795" ph="{&quot;version&quot;: &quot;0.1.43&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30740:30785" ph="{&quot;amdefine&quot;: &quot;1.0.1&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="30818:31107" ph="{&quot;version&quot;: &quot;2.2.5&quot;...}" />
-            <marker date="1511974823350" expanded="true" signature="31016:31097" ph="{&quot;optimist&quot;: &quot;0.3.7&quot;...}" />
             <marker date="1511974823350" expanded="true" signature="32877:32885" ph="{&quot;version&quot;: &quot;1.0.0&quot;...}" />
           </folding>
         </state>
@@ -669,10 +623,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding>
-            <marker date="1511974864374" expanded="true" signature="0:415" ph="{&quot;name&quot;: &quot;back&quot;...}" />
-            <marker date="1511974864374" expanded="true" signature="129:413" ph="{&quot;body-parser&quot;: &quot;~1.18.2&quot;...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -686,7 +637,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/schemas/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
+        <state relative-caret-position="867">
           <caret line="51" column="22" lean-forward="false" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
           <folding />
         </state>
@@ -710,8 +661,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/auth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+        <state relative-caret-position="1037">
+          <caret line="70" column="5" lean-forward="false" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
           <folding />
         </state>
       </provider>
