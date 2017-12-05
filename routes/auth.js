@@ -14,6 +14,7 @@ async function isAuth(req, res, next) {
         if (doc) {
             return next();
         }
+        res.sendStatus(401);
     } catch (err) {
         res.sendStatus(500);
     }
@@ -32,21 +33,21 @@ async function isAdmin (req, res, next) {
         }
         res.sendStatus(401);
     } catch (err) {
-        res.sendStatus(500);
+        res.sendStatus(400);
     }
 }
 
-router.get('/login', isAuth, (req, res, next) => {
+router.get('/login', isAuth, (req, res) => {
     res.send(200, true);
 });
 
-router.post('/login', async (req, res, next) => {
+router.post('/login', async (req, res) => {
     let { username, password } = req.body;
     try {
         const doc = await User.findOne({ username, password });
         if (doc) {
             req.session.username = username;
-            return res.send(200, true);
+            return res.status(200).send(true);
         }
         res.sendStatus(401);
     } catch(err) {
@@ -54,24 +55,24 @@ router.post('/login', async (req, res, next) => {
     }
 });
 
-router.get('/logout', (req, res, next) => {
+router.get('/logout', (req, res) => {
     req.session.destroy();
-    res.send(200, true);
+    res.status(200).send(true);
 });
 
-router.post('/register', async (req, res, next) => {
+router.post('/register', async (req, res) => {
     let { username, password } = req.body;
     const user = new User({ username, password });
     try {
         const doc = await user.save();
-        req.session.username = username;
-        res.send(200, true);
+        req.session.username = doc.username;
+        res.status(200).send(true);
     } catch(err) {
         res.sendStatus(400);
     }
 });
 
-router.get('/admin', isAdmin, (req, res, next) => {
+router.get('/admin', isAdmin, (req, res) => {
     res.send(200, true);
 });
 

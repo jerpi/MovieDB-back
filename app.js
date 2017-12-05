@@ -4,14 +4,11 @@ const express = require('express');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const path = require('path');
-const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 const mongoose = require('mongoose');
-const assert = require('assert');
-
 const auth = require('./routes/auth');
 
 const app = express();
@@ -27,21 +24,17 @@ if (app.get('env') === 'production') {
 }
 
 const url = 'mongodb://localhost:27017/MovieDB';
-const connection = mongoose.connect(url);
+const connection = mongoose.connect(url, {
+    useMongoClient: true,
+});
 app.use(session({
     secret: 'abcdefg',
     resave: false,
     saveUninitialized: false,
-    store: new MongoStore({ mongooseConnection: connection })
+    //store: new MongoStore({ mongooseConnection: connection })
 }));
 
-
-
 app.use('/auth', auth);
-app.use(express.static(path.join(__dirname, 'dist')));
-app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'dist/index.html'));
-});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -56,7 +49,7 @@ app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  res.status(err.status || 500);
+  res.sendStatus(err.status || 500);
 });
 
 module.exports = app;

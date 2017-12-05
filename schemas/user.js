@@ -12,9 +12,9 @@ const User = new Schema({
     },
     password: {
         type: String,
-        required: [true, 'Username is required'],
-        minlength: [8, 'Username must be between 8 and 30 characters long'],
-        maxlength: [30, 'Username must be between 8 and 30 characters long'],
+        required: [true, 'Password is required'],
+        minlength: [8, 'Password must be between 8 and 30 characters long'],
+        maxlength: [30, 'Password must be between 8 and 30 characters long'],
     },
     inscription: {
         type: Date,
@@ -28,23 +28,22 @@ const User = new Schema({
     }
 });
 
-User.pre('save', function(next) {
+User.pre('save', async function(next) {
     const now = Date.now();
     if (this.isNew) {
         this.inscription = now;
     }
     this.updated = now;
-    this.constructor.findOne({ username: this.username })
-        .then(
-            doc => {
-                let err;
-                if (doc) {
-                    err = new Error('Another user is already using this username');
-                }
-                next(err);
-            },
-            err => { next(err); }
-        );
+    try {
+        const doc = await this.constructor.findOne({ username: this.username });
+        let err;
+        if (doc) {
+            err = new Error('Another user is already using this username');
+        }
+        next(err);
+    } catch(err) {
+        next(err);
+    }
 });
 
 
