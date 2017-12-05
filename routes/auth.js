@@ -42,7 +42,7 @@ router.get('/login', isAuth, (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
-    let { username, password } = req.body;
+    const { username, password } = req.body;
     try {
         const doc = await User.findOne({ username, password });
         if (doc) {
@@ -61,7 +61,7 @@ router.get('/logout', (req, res) => {
 });
 
 router.post('/register', async (req, res) => {
-    let { username, password } = req.body;
+    const { username, password } = req.body;
     const user = new User({ username, password });
     try {
         const doc = await user.save();
