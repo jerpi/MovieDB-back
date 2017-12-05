@@ -9,7 +9,6 @@ router.get('/', (req, res, next) => {
 
 router.get('/:id', (req, res, next) => {
     //return only one movie
-
 });
 
 module.exports = router;
