@@ -7,13 +7,13 @@ const User = require('../schemas/user');
 async function isAuth(req, res, next) {
     const { username } = req.session;
     if (!username) {
-        return res.sendStatus(401);
-    }
-    try {
-        const doc = await User.findOne({ username });
-        if (doc) {
-            return next();
+            return res.sendStatus(401);
         }
+        try {
+            const doc = await User.findOne({ username });
+            if (doc) {
+                return next();
+            }
         res.sendStatus(401);
     } catch (err) {
         res.sendStatus(500);
@@ -38,7 +38,7 @@ async function isAdmin (req, res, next) {
 }
 
 router.get('/login', isAuth, (req, res) => {
-    res.send(200, true);
+    res.status(200).send(true);
 });
 
 router.post('/login', async (req, res) => {
@@ -65,8 +65,11 @@ router.post('/register', async (req, res) => {
     const user = new User({ username, password });
     try {
         const doc = await user.save();
-        req.session.username = doc.username;
-        res.status(200).send(true);
+        if (doc) {
+            req.session.username = doc.username;
+            res.status(200).send(true);
+        }
+        res.sendStatus(401);
     } catch(err) {
         res.sendStatus(400);
     }
