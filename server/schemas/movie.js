@@ -77,6 +77,18 @@ const Movie = new Schema({
     status: {
         type: String,
     },
+    videos: [{
+        type: {
+            id: String,
+            key: String,
+            name: String,
+            site: String,
+            size: String,
+            type: String,
+            iso_639_1: String,
+            iso_3166_1: String,
+        }
+    }],
 });
 
 Movie.pre('save', async function(next) {
