@@ -8,11 +8,9 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 const mongoose = require('mongoose');
-const auth = require('./routes/auth');
-const movies = require('./routes/movies');
-const cast = require('./routes/cast');
 
 const app = express();
+const routes = require('server/routes');
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -35,9 +33,7 @@ app.use(session({
     //store: new MongoStore({ mongooseConnection: connection })
 }));
 
-app.use('/auth', auth);
-app.use('/movies', movies);
-app.use('/cast', cast);
+app.use(routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
