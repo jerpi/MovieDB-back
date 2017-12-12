@@ -57,25 +57,19 @@ const Movie = new Schema({
         type: Number,
     },
     genres: [{
-        type: {
-            id: Number,
-            name: String,
-        },
+        id: Number,
+        name: String,
     }],
     production_companies: [{
-        type: {
-            id: Number,
-            name: String,
-        },
+        id: Number,
+        name: String,
     }],
     runtime: {
         type: Number,
     },
     spoken_languages: [{
-        type: {
-            iso_639_1: String,
-            name: String,
-        },
+        iso_639_1: String,
+        name: String,
     }],
     tagline: {
         type: String,

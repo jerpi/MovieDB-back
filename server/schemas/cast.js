@@ -19,8 +19,9 @@ const Cast = new Schema({
         type: String,
     },
     birthdate: {
-        type: String,
+        type: Date,
     },
+    updated: Date,
 });
 
 Cast.pre('save', async function(next) {
