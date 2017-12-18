@@ -5,6 +5,7 @@ const express = require('express');
 const router = express.Router();
 
 const token =  require('../../conf').api_token;
+const proxy = require('../../conf').proxy;
 const Movie = require('../schemas/movie');
 
 async function movieExists(req, res, next) {
@@ -29,9 +30,7 @@ async function fetchMovie(req, res, next) {
 
         const result = await axios.get(
             `http://api.myapifilms.com/tmdb/searchMovie?movieName=${title}&token=${token}&format=json&language=fr`,
-            {
-                withCredentials: true,
-            }
+            { proxy }
         );
         //console.log(result.data['data']['results']);
         if (!result.data['data']['results'] || !result.data['data']['results'][0]) {
@@ -39,7 +38,8 @@ async function fetchMovie(req, res, next) {
         }
         const idIMDB = result.data['data']['results'][0].id;
         const mov = await axios.get(
-            `http://api.myapifilms.com/tmdb/movieInfoImdb?idIMDB=${idIMDB}&token=${token}&format=json&language=fr&casts=1&images=1&keywords=1&videos=1&similar=1`
+            `http://api.myapifilms.com/tmdb/movieInfoImdb?idIMDB=${idIMDB}&token=${token}&format=json&language=fr&casts=1&images=1&keywords=1&videos=1&similar=1`,
+            { proxy }
         );
 
         let movie = new Movie(mov.data['data']);
