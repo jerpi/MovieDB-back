@@ -7,7 +7,6 @@ const router = express.Router();
 const token =  require('../../conf').api_token;
 const Movie = require('../schemas/movie');
 
-
 async function movieExists(req, res, next) {
     const title = req.query.title;
     if (!title) {
@@ -27,17 +26,23 @@ async function fetchMovie(req, res, next) {
     const title = req.query.title;
     if (req.movie) { return next(); }
     try {
-        const result = await axios.get( // TODO doesn't work
-            `http://api.myapifilms.com/tmdb/searchMovie?movieName=${title}&token=${token}&format=json&language=fr`
+
+        const result = await axios.get(
+            `http://api.myapifilms.com/tmdb/searchMovie?movieName=${title}&token=${token}&format=json&language=fr`,
+            {
+                withCredentials: true,
+            }
         );
-        if (!result.data['results'] || !result.data['results'][0]) {
+        //console.log(result.data['data']['results']);
+        if (!result.data['data']['results'] || !result.data['data']['results'][0]) {
             return res.sendStatus(404);
         }
-        const idIMDB = result.data['results'][0].id;
+        const idIMDB = result.data['data']['results'][0].id;
         const mov = await axios.get(
             `http://api.myapifilms.com/tmdb/movieInfoImdb?idIMDB=${idIMDB}&token=${token}&format=json&language=fr&casts=1&images=1&keywords=1&videos=1&similar=1`
         );
-        let movie = new Movie(mov);
+
+        let movie = new Movie(mov.data['data']);
         movie = await movie.save();
         req.movie = movie;
         next();

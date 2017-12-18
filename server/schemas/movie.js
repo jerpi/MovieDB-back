@@ -15,15 +15,15 @@ const Movie = new Schema({
     }],
     backdrop_path: {
         type: String,
-        required: [true, 'Backdrop_path is required'],
+        required: [true, 'backdrop_path is required'],
     },
     poster_path: {
         type: String,
-        required: [true, 'Poster_path is required'],
+        required: [true, 'poster_path is required'],
     },
     popularity: {
         type: Number,
-        required: [true, 'Popularity is required'],
+        required: [true, 'popularity is required'],
     },
     vote_average: {
         type: Number,
@@ -36,11 +36,11 @@ const Movie = new Schema({
     },
     original_title: {
         type: String,
-        required: [true, 'Original_title is required'],
+        required: [true, 'original_title is required'],
     },
     release_date: {
         type: String,
-        required: [true, 'Release_date is required'],
+        required: [true, 'release_date is required'],
     },
     title: {
         type: String,
@@ -48,7 +48,7 @@ const Movie = new Schema({
     },
     overview: {
         type: String,
-        required: [true, 'Overview is required'],
+        required: [true, 'overview is required'],
     },
     revenue: {
         type: Number,
@@ -101,7 +101,7 @@ Movie.pre('save', async function(next) {
         const doc = await this.constructor.findOne({ id: this.id });
         let err;
         if (doc) {
-            err = new Error('Another movie is already using this id');
+            err = new Error('Another movie is already using this id.');
         }
         next(err);
     } catch(err) {
