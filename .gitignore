@@ -58,5 +58,4 @@ typings/
 # Idea
 .idea/
 
-
-/models/user.js
+conf-secret.js
