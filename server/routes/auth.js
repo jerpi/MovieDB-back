@@ -1,16 +1,16 @@
-"use strict";
+'use strict';
 
 const express = require('express');
 const router = express.Router();
 const User = require('../schemas/user');
 
 async function isAuth(req, res, next) {
-    const { username } = req.session;
-    if (!username) {
+    const { user } = req.session;
+    if (!user) {
             return res.sendStatus(401);
         }
         try {
-            const doc = await User.findOne({ username });
+            const doc = await User.findOne({ _id: user });
             if (doc) {
                 return next();
             }
@@ -21,12 +21,12 @@ async function isAuth(req, res, next) {
 }
 
 async function isAdmin (req, res, next) {
-    const { username } = req.session;
+    const { user } = req.session;
     if (!username) {
         res.sendStatus(401);
     }
     try {
-        const doc = await User.findOne({ username });
+        const doc = await User.findOne({ _id: user });
         if (doc) {
             if (doc.admin) { return next(); }
             return res.sendStatus(403);
@@ -46,7 +46,7 @@ router.post('/login', async (req, res) => {
     try {
         const doc = await User.findOne({ username, password });
         if (doc) {
-            req.session.username = username;
+            req.session['user'] = doc._id;
             return res.status(200).send(true);
         }
         res.sendStatus(401);
@@ -79,4 +79,7 @@ router.get('/admin', isAdmin, (req, res) => {
     res.send(200, true);
 });
 
-module.exports = router;
+module.exports = {
+    router,
+    isAuth,
+};

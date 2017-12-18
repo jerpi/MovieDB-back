@@ -27,6 +27,10 @@ const url = 'mongodb://localhost:27017/MovieDB';
 const connection = mongoose.connect(url, {
     useMongoClient: true,
 });
+connection
+    .catch((err) => {
+        process.exit(27);
+    });
 
 app.use(session({
     secret: 'abcdefg',

@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const axios = require('axios');
 const express = require('express');
@@ -81,4 +81,6 @@ router.get('/:id', async (req, res) => {
     }
 });
 
-module.exports = router;
+module.exports = {
+    router
+};
