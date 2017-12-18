@@ -15,7 +15,7 @@ async function movieExists(req, res, next) {
     }
     try {
         req.movie = await Movie.findOne(
-            { title }
+            { title: new RegExp(title, "i") }
         );
         next();
     } catch(error) {
@@ -27,16 +27,16 @@ async function fetchMovie(req, res, next) {
     const title = req.query.title;
     if (req.movie) { return next(); }
     try {
-
         const result = await axios.get(
             `http://api.myapifilms.com/tmdb/searchMovie?movieName=${title}&token=${token}&format=json&language=fr`,
             { proxy }
         );
         //console.log(result.data['data']['results']);
-        if (!result.data['data']['results'] || !result.data['data']['results'][0]) {
+        const results = result.data['data']['results'];
+        if (!results || !results[0]) {
             return res.sendStatus(404);
         }
-        const idIMDB = result.data['data']['results'][0].id;
+        const idIMDB = results[0].id;
         const mov = await axios.get(
             `http://api.myapifilms.com/tmdb/movieInfoImdb?idIMDB=${idIMDB}&token=${token}&format=json&language=fr&casts=1&images=1&keywords=1&videos=1&similar=1`,
             { proxy }
