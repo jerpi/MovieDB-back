@@ -39,7 +39,7 @@ const Movie = new Schema({
         required: [true, 'original_title is required'],
     },
     release_date: {
-        type: String,
+        type: Date,
         required: [true, 'release_date is required'],
     },
     title: {

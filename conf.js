@@ -5,7 +5,9 @@ module.exports = {
     proxy: {
         host: 'proxy.enib.fr',
         port: 3128,
-        username: auth.username,
-        password: auth.password,
+        auth: {
+            username: auth.username,
+            password: auth.password,
+        }
     },
 };

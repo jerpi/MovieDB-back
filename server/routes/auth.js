@@ -37,6 +37,12 @@ async function isAdmin (req, res, next) {
     }
 }
 
+router.get('/username', isAuth, async (req, res) => {
+    const { user } = req.session;
+    const u = await User.findOne({ _id: user });
+    res.send(u.username);
+});
+
 router.get('/login', isAuth, (req, res) => {
     res.status(200).send(true);
 });
