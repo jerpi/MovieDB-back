@@ -14,7 +14,7 @@ async function movieExists(req, res, next) {
         res.sendStatus(400);
     }
     try {
-        req.movie = await Movie.findOne(
+        req.movies = await Movie.find(
             { title: new RegExp(title, "i") }
         );
         next();
@@ -25,17 +25,17 @@ async function movieExists(req, res, next) {
 
 async function fetchMovie(req, res, next) {
     const title = req.query.title;
-    if (req.movie) { return next(); }
+    if (req.movies) { return next(); }
     try {
         const result = await axios.get(
             `http://api.myapifilms.com/tmdb/searchMovie?movieName=${title}&token=${token}&format=json&language=fr`,
             { proxy }
         );
-        //console.log(result.data['data']['results']);
         const results = result.data['data']['results'];
-        if (!results || !results[0]) {
+        if (!results || results.isEmpty()) {
             return res.sendStatus(404);
         }
+
         const idIMDB = results[0].id;
         const mov = await axios.get(
             `http://api.myapifilms.com/tmdb/movieInfoImdb?idIMDB=${idIMDB}&token=${token}&format=json&language=fr&casts=1&images=1&keywords=1&videos=1&similar=1`,
@@ -69,7 +69,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/query', movieExists, fetchMovie, (req, res) => {
-    res.send(req.movie);
+    res.send(req.movies);
 });
 
 router.get('/:id', async (req, res) => {
